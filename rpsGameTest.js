@@ -1,5 +1,5 @@
 
-function rockPaperScissors(){
+/*function rockPaperScissors(){
     //let user = prompt("Enter either Rock paper or scissors");
     let computer = Math.floor((Math.random() * 3) + 1);
     let paper = (computer === 1); // 
@@ -76,10 +76,18 @@ else if (user === "scissors" && paper === true){
 
 }
 
+for (points = 0; points <10; points++){
+    let points = document.getElementById("numberOnWebPage");
+   console.log(points);
+}
+*/
+//document.getElementById("ptsPlus").innerHTML= "you Are a winnnnnnnnnnnnnnnnnnnner!!!!!";
+//document.getElementById("pointIncrement").innerHTML= myNum;
 
-//rockPaperScissors();
-
-
+function Stone(){ // This will be Rock
+    document.getElementById("myH1").style.color = "red"; // myH1 id will be points id
+}
+     
 function Rock(){
       //let user = prompt("Enter either Rock paper or scissors");
     let computer = Math.floor((Math.random() * 3) + 1);
@@ -87,9 +95,11 @@ function Rock(){
     let scissors = (computer === 2); // 
     let rock = (computer === 3);
     let buttonRock = document.getElementById("rock");
+    let winMessage = "Congratulations you beat Paper!";
 
-    if (buttonRock && paper === true){
-        alert("computer chose paper you loose!");
+     if (buttonRock && paper === true){
+       
+        //alert("computer chose paper you loose!");
         console.log(computer);
         console.log(paper);   
     
@@ -103,9 +113,10 @@ function Rock(){
     else if (buttonRock && scissors === true){
         alert("computer chose scissors you win!");
         console.log(computer);
-         
+      
     
     }
+
 }
 
 
@@ -195,3 +206,4 @@ else if (buttonScissors && scissors === true){
 
 }
 }
+
