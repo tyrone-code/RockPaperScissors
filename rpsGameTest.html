@@ -6,21 +6,54 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
+<h1 class="rpsheading">Rock Paper Scissors</h1>
 
-
-<button type="button" onclick="Rock()" id="rock">Rock</button>
+<!--<button type="button" onclick="Rock()" id="rock">Rock</button>
 <button type="button" onclick="Paper()" id="paper">Paper</button>
-<button type="button" onclick="Scissor()" id="scissor">Scissors</button>
+<button type="button" onclick="Scissor()" id="scissor">Scissors</button>-->
 
 <!---------------------------------------Test-------------------------->
-<p>Your Score</p><span id="userPoints">0</span>
-<p>Computer Score</p><span id="computerPoints">0</span>
-<img src="images/rock.png" style="width:10rem">
-<img src="images/paper.png" style="width:10rem">
-<img src="images/scissors.png" style="width:10rem">
+<!-- <div class="your-points-position">
+   
+</div> -->
+<div class="bounding-div-box">
+    <span class="your-points-position">
+        <p class="lookscool">Your Score</p><span id="userPoints" class="lookscool">0</span>
+    </span>
+    <span class="computer-point-position">
+        <p class="lookscool">Computer Score</p><span id="computerPoints" class="lookscool">0</span>
+    </span>
+</div>
+<br>
+<br>
+<br>
+<span class="rockhover">
+    <img src="images/rock.png" style="width:8rem" onclick="Rock()" id="rock">
+</span>
+<span class="paperhover">
+    <img src="images/paper.png" style="width:8rem" onclick="Paper()" id="paper">
+</span>
+<span class="scissorshover">
+    <img src="images/scissors.png" style="width:8rem" onclick="Scissor()" id="scissor">
+</span>
+<!------------------COMPUTER SELECTION------------------>
 
-<script src="rpsGameTest.js"></script>
+
+
+<span class="computer-image-position">
+    <span>
+        <img src="images/rock.png" class="image-resize" id="rockImg">
+    </span>
+    <span>
+        <img src="images/paper.png" class="image-resize" id="paperImg">
+    </span>
+    <span>
+        <img src="images/scissors.png" class="image-resize" id="scissorsImg">
+    </span>
+    <script src="rpsGameTest.js"></script>
+</span>
 </body>
 
 </html>

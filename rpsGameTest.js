@@ -89,10 +89,11 @@ function Rock(){
         alert("Computer Chose paper you lose!") 
         computerPoints = computerPoints + 1
         document.getElementById("computerPoints").innerHTML = computerPoints;
+        document.getElementById("paperImg").style.display = "block";
         }
     else if (buttonRock && rock === true){
         alert("computer chose rock aswell it is a draw!");
-        
+        document.getElementById("rockImg").style.display = "block";
     }
     
     else if (buttonRock && scissors === true){
@@ -100,7 +101,7 @@ function Rock(){
         console.log(computer);
         userPoints = userPoints + 1
         document.getElementById("userPoints").innerHTML = userPoints;
-    
+        document.getElementById("scissorsImg").style.display = "block";
     }
 
 }
