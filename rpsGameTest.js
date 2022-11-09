@@ -86,22 +86,25 @@ function Rock(){
      if (buttonRock && paper === true){
         console.log(computer);
         console.log(paper);  
-        alert("Computer Chose paper you lose!") 
         computerPoints = computerPoints + 1
         document.getElementById("computerPoints").innerHTML = computerPoints;
         document.getElementById("paperImg").style.display = "block";
+        document.getElementById("rockImg").style.display = "hidden";
+        document.getElementById("scissorsImg").style.display = "hidden";
         }
     else if (buttonRock && rock === true){
-        alert("computer chose rock aswell it is a draw!");
         document.getElementById("rockImg").style.display = "block";
+        document.getElementById("paperImg").style.display = "none";
+        document.getElementById("scissorsImg").style.display = "none";
     }
     
     else if (buttonRock && scissors === true){
-        alert("computer chose scissors you win!");
         console.log(computer);
         userPoints = userPoints + 1
         document.getElementById("userPoints").innerHTML = userPoints;
         document.getElementById("scissorsImg").style.display = "block";
+        document.getElementById("rockImg").style.display = "none";
+        document.getElementById("paperImg").style.display = "none";
     }
 
 }
@@ -116,24 +119,29 @@ function Paper(){
   let buttonPaper = document.getElementById("paper");
   
   if (buttonPaper && paper === true){
-      alert("computer chose paper its a a draw");
       console.log(computer);
       console.log(paper);   
-  
+      document.getElementById("paperImg").style.display = "block";
+      document.getElementById("rockImg").style.display = "none";
+      document.getElementById("scissorsImg").style.display = "none";
       }
   else if (buttonPaper && rock === true){
-      alert("computer chose rock you win!");
       console.log(computer);
       console.log(rock);   
       userPoints = userPoints + 1
       document.getElementById("userPoints").innerHTML = userPoints;
+      document.getElementById("paperImg").style.display = "none";
+      document.getElementById("rockImg").style.display = "block";
+      document.getElementById("scissorsImg").style.display = "none";
   }
   
   else if (buttonPaper && scissors === true){
-      alert("computer chose scissors you lose!");
       console.log(computer);
       computerPoints = computerPoints + 1
       document.getElementById("computerPoints").innerHTML = computerPoints;
+      document.getElementById("paperImg").style.display = "none";
+      document.getElementById("rockImg").style.display = "none";
+      document.getElementById("scissorsImg").style.display = "block";
        
   
   }
@@ -148,26 +156,40 @@ let rock = (computer === 3);
 let buttonScissors = document.getElementById("scissor");
 
 if (buttonScissors && paper === true){
-    alert("computer chose paper you win!");
     console.log(computer);
     console.log(paper);
     userPoints = userPoints + 1
     document.getElementById("userPoints").innerHTML = userPoints;
+    document.getElementById("paperImg").style.display = "block";
+    document.getElementById("rockImg").style.display = "none";
+    document.getElementById("scissorsImg").style.display = "none";
 
     }
 else if (buttonScissors && rock === true){
-    alert("computer chose rock you lose!");
     console.log(computer);
     console.log(rock);
     computerPoints = computerPoints + 1
     document.getElementById("computerPoints").innerHTML = computerPoints;
+    document.getElementById("paperImg").style.display = "none";
+    document.getElementById("rockImg").style.display = "block";
+    document.getElementById("scissorsImg").style.display = "none";
+
 }
 
 else if (buttonScissors && scissors === true){
-    alert("computer chose scissors its a draw! klink!");
     console.log(computer);
+    document.getElementById("paperImg").style.display = "none";
+    document.getElementById("rockImg").style.display = "none";
+    document.getElementById("scissorsImg").style.display = "block";
      
 
 }
 }
 
+// program to display a text using setTimeout method
+// program to display a text using setTimeout method
+function greet() {
+    console.log('Hello world');
+}
+
+setTimeout(Rock, 3000);
