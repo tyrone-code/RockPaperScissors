@@ -29,21 +29,30 @@
 <br>
 <br>
 <br>
-<span>
-    <span class="rockhover">
-        <img src="images/pixelRock.png" style="width:8rem" onclick="Rock()" id="rock">
-    </span>
-    <span class="paperhover">
-        <img src="images/pixelPaper.png" style="width:8rem" onclick="Paper()" id="paper">
-    </span>
-    <span class="scissorshover">
-        <img src="images/pixelScissor.png" style="width:8rem" onclick="Scissor()" id="scissor">
-    </span>
-    <!------------------COMPUTER SELECTION------------------>
+<div id="my">
+    <div class="your-images-position">
+        <span id="rockhover">
+            <img src=" images/pixelRock.png" style="width:8rem" onclick="Rock();
+        setTimeout(showImagesRock, 2500);" id="rock" onmouseover="this.className='hover';"
+                onmouseout="this.className='';">
+        </span>
+        <span id="paperhover">
+            <img src="images/pixelPaper.png" style="width:8rem" onclick="Paper(); setTimeout(showImagesPaper, 2500);"
+                id="paper" onmouseover="this.className='hover';" onmouseout="this.className='';">
 
+        </span>
+        <span id="scissorshover">
+            <img src="images/pixelScissor.png" style="width:8rem" onmouseover="this.className='hover';"
+                onmouseout="this.className='';" onclick="Scissors(); setTimeout(showImagesScissors, 2500);"
+                id="scissors">
+        </span>
+    </div>
+</div>
+<!------------------COMPUTER SELECTION------------------>
 
-
-    <span class="computer-image-position">
+<!-- Need to fix  -->
+<div>
+    <span class="computerImagePosition">
         <span>
             <img src="images/pixelRock.png" class="image-resize" id="rockImg">
         </span>
@@ -53,10 +62,12 @@
         <span>
             <img src="images/pixelScissor.png" class="image-resize" id="scissorsImg">
         </span>
-        <script src="rpsGameTest.js"></script>
-    </span>
-</span>
 
-</body>
+    </span>
+</div>
+<script src="rpsGameTest.js"></script>
+<li;">Home</li>
+
+    </body>
 
 </html>

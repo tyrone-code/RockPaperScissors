@@ -1,76 +1,4 @@
 
-// function rockPaperScissors(){
-//     //let user = prompt("Enter either Rock paper or scissors");
-//     let computer = Math.floor((Math.random() * 3) + 1);
-//     let paper = (computer === 1); // 
-//     let scissors = (computer === 2); // 
-//     let rock = (computer === 3);
-//     let buttonRock = document.getElementById("rock");
-//     let buttonPaper = document.getElementById("paper");
-//     let buttonScissors = document.getElementById("scissors");
-   
-//     // rock is 1
-//     // paper is 2
-//     // scissors is 3
-   
-// if (buttonRock && paper === true){
-//     document.getElementById("computerPoints").innerHTML = "computer gets a point";
-//     alert("computer chose paper you loose!");
-    
-//     }
-// else if (buttonRock && rock === true){
-//     alert("computer chose rock aswell it is a draw!");
-      
-// }
-
-// else if (buttonRock && scissors === true){
-//     alert("computer chose scissors you win!");
-//     document.getElementById("playerPoints").innerHTML = "you got a point!";
-//    // document.getElementById("demo").innerHTML = "I have changed!";
-
-
-// }
-
-// //_------------------------------------------------------- paper
-// else if (buttonPaper && scissors === true){
-//     alert("computer chose scissors you lose!");
-
-// }
-
-// else if (buttonPaper && paper === true){
-//     alert("computer chose Paper aswell! it is a draw");
-     
-
-// }
-
-
-// else if (buttonPaper && rock === true){
-//     alert("computer chose rock you win!");
-// }
-// //_------------------------------------------------------- scissors
-// else if (user === "scissors" && scissors === true){
-//     alert("computer chose scissors its a draw KLINK!");
-
-// }
-
-// else if (user === "scissors" && rock === true){
-//     alert("computer chose Rock you lose!");
-     
-
-// }
-
-
-// else if (user === "scissors" && paper === true){
-//     alert("computer chose Paper you win!");
-     
-
-// }
-
-
-// }
-
-
-
 var computerPoints = 0
 var userPoints = 0
 
@@ -82,6 +10,9 @@ function Rock(){
     let scissors = (computer === 2); // 
     let rock = (computer === 3);
     let buttonRock = document.getElementById("rock");
+    document.getElementById("paper").style.display = "none";
+    document.getElementById("scissors").style.display = "none";
+
    
      if (buttonRock && paper === true){
         console.log(computer);
@@ -89,8 +20,10 @@ function Rock(){
         computerPoints = computerPoints + 1
         document.getElementById("computerPoints").innerHTML = computerPoints;
         document.getElementById("paperImg").style.display = "block";
-        document.getElementById("rockImg").style.display = "hidden";
-        document.getElementById("scissorsImg").style.display = "hidden";
+        document.getElementById("rockImg").style.display = "none";
+        document.getElementById("scissorsImg").style.display = "none";
+        
+       
         }
     else if (buttonRock && rock === true){
         document.getElementById("rockImg").style.display = "block";
@@ -109,7 +42,6 @@ function Rock(){
 
 }
 
-
 function Paper(){
     //let user = prompt("Enter either Rock paper or scissors");
   let computer = Math.floor((Math.random() * 3) + 1);
@@ -117,6 +49,9 @@ function Paper(){
   let scissors = (computer === 2); // 
   let rock = (computer === 3);
   let buttonPaper = document.getElementById("paper");
+  document.getElementById("rock").style.display = "none";
+  document.getElementById("scissors").style.display = "none";
+
   
   if (buttonPaper && paper === true){
       console.log(computer);
@@ -147,13 +82,15 @@ function Paper(){
   }
 }
 
-function Scissor(){
+function Scissors(){
   //let user = prompt("Enter either Rock paper or scissors");
 let computer = Math.floor((Math.random() * 3) + 1);
 let paper = (computer === 1); // 
 let scissors = (computer === 2); // 
 let rock = (computer === 3);
-let buttonScissors = document.getElementById("scissor");
+let buttonScissors = document.getElementById("scissors");
+document.getElementById("rock").style.display = "none";
+document.getElementById("paper").style.display = "none";
 
 if (buttonScissors && paper === true){
     console.log(computer);
@@ -186,10 +123,67 @@ else if (buttonScissors && scissors === true){
 }
 }
 
-// program to display a text using setTimeout method
-// program to display a text using setTimeout method
-function greet() {
-    console.log('Hello world');
-}
+function showImagesRock() {
+    document.getElementById("paper").style.display = "block";
+    document.getElementById("scissors").style.display = "block";
+    // --------------------------------------------------------
 
-setTimeout(Rock, 3000);
+    //paper position after rock function is executed
+    document.getElementById("paper").style.marginLeft = "8rem";
+    document.getElementById("paper").style.marginTop = "-11rem";
+    // -------------------------------------------------------
+    // Scissors position after paper function is executed
+    document.getElementById("scissors").style.marginLeft = "17rem";
+    document.getElementById("scissors").style.marginTop = "-11rem";
+    // -----------------------------------------------------------
+    // hover effect....
+    document.stylesheet[0].insertRule("#rockhover:hover {color:green}")
+    document.stylesheet[0].insertRule("#paperhover:hover {color:green}")
+    document.stylesheet[0].insertRule("#scissorshover:hover {color:green}")
+  }
+  function showImagesPaper() {
+    document.getElementById("rock").style.display = "block";
+    document.getElementById("scissors").style.display = "block";
+//paper position after paper function is executed
+document.getElementById("paper").style.marginLeft = "8rem";
+document.getElementById("paper").style.marginTop = "-11rem";
+ // Scissors position after paper function is executed
+ document.getElementById("scissors").style.marginLeft = "17rem";
+ document.getElementById("scissors").style.marginTop = "-11rem";
+ //-------------------------------------------------------------------
+
+
+   
+  }
+
+  function showImagesScissors() {
+    document.getElementById("paper").style.display = "block";
+    document.getElementById("rock").style.display = "block";
+    document.getElementById("paper").style.marginLeft = "8rem";
+document.getElementById("paper").style.marginTop = "-11rem";
+ // Scissors position after paper function is executed
+ document.getElementById("scissors").style.marginLeft = "17rem";
+ document.getElementById("scissors").style.marginTop = "-11rem";
+ //-------------------------------------------------------------------
+
+
+  }
+
+  // .computer-image-position{
+  //   margin-left:60rem;
+  //   position:absolute;
+  //   margin-top:-12rem;
+//   var foo = document.createElement("div");
+//   foo.className = "foo";
+//   foo.innerHTML = "This is foo, hover me";
+//   document.body.appendChild(foo);
+  
+//   var style = document.createElement("style");
+//   // Pick a color at random
+//   var color = ["red", "blue", "green"][Math.floor(Math.random() * 3)];
+//   style.appendChild(
+//       document.createTextNode(
+//             ".foo:hover { background-color: " + color + " }")
+//   );
+//   document.querySelector("head").appendChild(style);
+
