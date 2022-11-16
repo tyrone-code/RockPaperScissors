@@ -106,12 +106,17 @@ margin-top:-12rem;
   color: green;
   font-family: 'Common Pixel', sans-serif;
   font-size: 40px;
+  margin-top:-10px;
+  position: absolute;
 }
 
 .youLoseMessage{
   color: red;
   font-family: 'Common Pixel', sans-serif;
   font-size: 40px;
+  margin-top:-10px;
+
+  position: absolute;
 }
 
 
@@ -120,6 +125,9 @@ margin-top:-12rem;
   color: orange;
   font-family: 'Common Pixel', sans-serif;
   font-size: 40px;
+  margin-top:-10px;
+
+  position: absolute;
 }
 
 
