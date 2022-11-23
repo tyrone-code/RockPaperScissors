@@ -2,6 +2,8 @@
 var computerPoints = 0
 var userPoints = 0
 
+// var audio = new Audio('victory_sound_effect.mp3');
+
 
 
 function Rock(){
@@ -15,17 +17,21 @@ function Rock(){
     document.getElementById("scissors").style.display = "none";
     let endResult = 5
     if (computerPoints === endResult){
-      alert("You lose!")
+    
       document.getElementById("computerPoints").innerHTML = 0
       document.getElementById("userPoints").innerHTML = 0
-      window.location.reload(true)
-
+    
+      Lmodal.style.display = "block";
+      document.getElementById('gameOverAudio').play();
+      
     }
     else if (userPoints === endResult){
-      alert("You win!")
+      
       document.getElementById("computerPoints").innerHTML = 0
       document.getElementById("userPoints").innerHTML = 0
-      window.location.reload(true)
+     
+      modal.style.display = "block";
+      document.getElementById('victoryAudio').play();
     }
    
      else if (buttonRock && paper === true){
@@ -38,6 +44,8 @@ function Rock(){
         document.getElementById("paperImg").style.display = "block";
         document.getElementById("rockImg").style.display = "none";
         document.getElementById("scissorsImg").style.display = "none";
+        document.getElementById('pointGainComputer').play();
+        
 
         
        
@@ -48,6 +56,7 @@ function Rock(){
         document.getElementById("scissorsImg").style.display = "none";
         document.getElementById("drawMessage").innerHTML = "Computer chose rock as well it is a draw!!";
         document.getElementById("drawMessage").style.display = "block"
+        document.getElementById('drawSound').play();
     }
     
     else if (buttonRock && scissors === true){
@@ -59,6 +68,7 @@ function Rock(){
         document.getElementById("paperImg").style.display = "none";
         document.getElementById("winMessage").innerHTML = "Computer chose scissors you win!";
         document.getElementById("winMessage").style.display = "block"
+        document.getElementById('pointGainYou').play();
     }
  
 
@@ -78,17 +88,17 @@ function Paper(){
   document.getElementById("rock").style.display = "none";
   document.getElementById("scissors").style.display = "none";
   if (computerPoints === endResult){
-    alert("You lose!")
     document.getElementById("computerPoints").innerHTML = 0
     document.getElementById("userPoints").innerHTML = 0
-    window.location.reload(true)
-
+    Lmodal.style.display = "block";
+    document.getElementById('gameOverAudio').play();
   }
   else if (userPoints === endResult){
-    alert("You win!")
+    modal.style.display = "block";
     document.getElementById("computerPoints").innerHTML = 0
     document.getElementById("userPoints").innerHTML = 0
-    window.location.reload(true)
+    document.getElementById('victoryAudio').play();
+    
   }
   
   else if (buttonPaper && paper === true){
@@ -99,6 +109,7 @@ function Paper(){
       document.getElementById("scissorsImg").style.display = "none";
       document.getElementById("drawMessage").innerHTML = "Computer chose paper as well it is a draw!!";
       document.getElementById("drawMessage").style.display = "block"
+      document.getElementById('drawSound').play();
       }
   else if (buttonPaper && rock === true){
       console.log(computer);
@@ -110,6 +121,7 @@ function Paper(){
       document.getElementById("scissorsImg").style.display = "none";
       document.getElementById("winMessage").innerHTML = "Computer chose rock you win!";
       document.getElementById("winMessage").style.display = "block"
+      document.getElementById('pointGainYou').play();
   }
   
   else if (buttonPaper && scissors === true){
@@ -121,6 +133,7 @@ function Paper(){
       document.getElementById("scissorsImg").style.display = "block";
       document.getElementById("loseMessage").innerHTML = "Computer chose scissors you lose!";
       document.getElementById("loseMessage").style.display = "block"
+      document.getElementById('pointGainComputer').play();
        
   
   }
@@ -139,17 +152,21 @@ let buttonScissors = document.getElementById("scissors");
 document.getElementById("rock").style.display = "none";
 document.getElementById("paper").style.display = "none";
 if (computerPoints === endResult){
-  alert("You lose!")
   document.getElementById("computerPoints").innerHTML = 0
   document.getElementById("userPoints").innerHTML = 0
-  window.location.reload(true)
+  Lmodal.style.display = "block";
+  document.getElementById('gameOverAudio').play();
+
+  
+  
 
 }
 else if (userPoints === endResult){
-  alert("You win!")
+  modal.style.display = "block";
   document.getElementById("computerPoints").innerHTML = 0
   document.getElementById("userPoints").innerHTML = 0
-  window.location.reload(true)
+  document.getElementById('victoryAudio').play();
+
 }
 
 else if (buttonScissors && paper === true){
@@ -162,7 +179,7 @@ else if (buttonScissors && paper === true){
     document.getElementById("scissorsImg").style.display = "none";
     document.getElementById("winMessage").innerHTML = "Computer chose paper you win!";
     document.getElementById("winMessage").style.display = "block"
-
+    document.getElementById('pointGainYou').play();
     }
 else if (buttonScissors && rock === true){
     console.log(computer);
@@ -174,7 +191,7 @@ else if (buttonScissors && rock === true){
     document.getElementById("scissorsImg").style.display = "none";
     document.getElementById("loseMessage").innerHTML = "Computer chose rock you lose!";
     document.getElementById("loseMessage").style.display = "block"
-
+    document.getElementById('pointGainComputer').play();
 }
 
 else if (buttonScissors && scissors === true){
@@ -184,6 +201,7 @@ else if (buttonScissors && scissors === true){
     document.getElementById("scissorsImg").style.display = "block";
     document.getElementById("drawMessage").innerHTML = "Computer chose scissors as well it is a draw!!";
     document.getElementById("drawMessage").style.display = "block"
+    document.getElementById('drawSound').play();
 
 }
 }
@@ -265,28 +283,62 @@ document.getElementById("winMessage").style.display = "none"
 
   }
 
+//Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  window.location.reload(true)
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    window.location.reload(true)
+    modal.style.display = "none";
+  }
+}
+
+
+// lmodel
+
 // Get the modal
-// var modal = document.getElementById("myModal");
+var Lmodal = document.getElementById("LmyModal");
 
-// // Get the button that opens the modal
-// var btn = document.getElementById("myBtn");
+// Get the button that opens the modal
+var Lbtn = document.getElementById("LmyBtn");
 
-// // Get the <span> element that closes the modal
-// var span = document.getElementsByClassName("close")[0];
+// Get the <span> element that closes the modal
+var Lspan = document.getElementsByClassName("Lclose")[0];
 
-// // When the user clicks the button, open the modal 
-// btn.onclick = function() {
-//   modal.style.display = "block";
-// }
+// When the user clicks the button, open the modal 
+Lbtn.onclick = function() {
+  Lmodal.style.display = "block";
+}
 
-// // When the user clicks on <span> (x), close the modal
-// span.onclick = function() {
-//   modal.style.display = "none";
-// }
+// When the user clicks on <span> (x), close the modal
+Lspan.onclick = function() {
+  Lmodal.style.display = "none";
+  window.location.reload(true)
+}
 
-// // When the user clicks anywhere outside of the modal, close it
-// window.onclick = function(event) {
-//   if (event.target == modal) {
-//     modal.style.display = "none";
-//   }
-// }
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == Lmodal) {
+    window.location.reload(true)
+    Lmodal.style.display = "none";
+  }
+}
+

@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <h1 class="rpsheading">Rock Paper Scissors</h1>
-
+<h1 class="points-5">First to 5 points Wins!</h1>
 <!--<button type="button" onclick="Rock()" id="rock">Rock</button>
 <button type="button" onclick="Paper()" id="paper">Paper</button>
 <button type="button" onclick="Scissor()" id="scissor">Scissors</button>-->
@@ -33,17 +33,17 @@
     <div class="your-images-position">
         <span id="rockhover">
             <img src=" images/pixelRock.png" style="width:8rem" onclick="Rock();
-        setTimeout(showImagesRock, 2500);" id="rock" onmouseover="this.className='hover';"
+        setTimeout(showImagesRock, 1700);" id="rock" onmouseover="this.className='hover';"
                 onmouseout="this.className='';">
         </span>
         <span id="paperhover">
-            <img src="images/pixelPaper.png" style="width:8rem" onclick="Paper(); setTimeout(showImagesPaper, 2500);"
+            <img src="images/pixelPaper.png" style="width:8rem" onclick="Paper(); setTimeout(showImagesPaper, 1700);"
                 id="paper" onmouseover="this.className='hover';" onmouseout="this.className='';">
 
         </span>
         <span id="scissorshover">
             <img src="images/pixelScissor.png" style="width:8rem" onmouseover="this.className='hover';"
-                onmouseout="this.className='';" onclick="Scissors(); setTimeout(showImagesScissors, 2500);"
+                onmouseout="this.className='';" onclick="Scissors(); setTimeout(showImagesScissors, 1700);"
                 id="scissors">
         </span>
     </div>
@@ -69,23 +69,79 @@
 <p class="youWinMessage" id="winMessage"></p>
 <p class="youLoseMessage" id="loseMessage"></p>
 <p class="youDrawMessage" id="drawMessage"></p>
+<audio id="victoryAudio">
+    <source src="/Sounds/victory_sound_effect.mp3" type="audio/mp3">
+</audio>
 
 
-<!-- <h2>Modal Example</h2>
+<audio id="gameOverAudio">
+    <source src="/Sounds/game_over_sound_effect.mp3" type="audio/mp3">
+</audio>
 
-<!-- Trigger/Open The Modal 
-<button id="myBtn">Open Modal</button>
+<audio id="pointGainYou">
+    <source src="/Sounds/point_gain_you.mp3" type="audio/mp3">
+</audio>
 
-<!-- The Modal 
+<audio id="pointGainComputer">
+    <source src="/Sounds/point_gain_computer.mp3" type="audio/mp3">
+</audio>
+
+<audio id="drawSound">
+    <source src="/Sounds/draw_sound.mp3" type="audio/mp3">
+</audio>
+
+
+<!-- Trigger/Open The Modal -->
+<div id="display-nothing">
+    <button id="myBtn">Open Modal</button>
+</div>
+
+<!-- The Modal -->
+
 <div id="myModal" class="modal">
 
-    <!-- Modal content 
+    <!-- Modal content -->
     <div class="modal-content">
+        <img src="/images/VICTORY_GIF.gif" class="victory-gif">
         <span class="close">&times;</span>
-        <p class="modal-win-message">YOU WIN!!</p>
+        <p class="modal-win-message">You win!</p>
+
     </div>
 
-</div> -->
+</div>
+
+
+
+<!-- Trigger/Open The Modal -->
+<div id="display-nothing">
+    <button id="LmyBtn">Open Modal</button>
+</div>
+
+<!-- The Modal -->
+<div id="LmyModal" class="Lmodal">
+
+    <!-- Modal content -->
+    <div class="Lmodal-content">
+        <span class="Lclose">&times;</span>
+        <p class="modal-lose-message">GAME OVER!</p>
+        <img src="/images/lose_gif.gif" class="lose-gif">
+        <p class="modal-try-message">Try again!</p>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 <script src="rpsGameTest.js"></script>

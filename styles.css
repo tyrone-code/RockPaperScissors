@@ -33,6 +33,12 @@
   font-family: 'Common Pixel', sans-serif;
   font-size: 60px;
 }
+.points-5{
+  margin-left:27rem;
+  font-family: 'Common Pixel', sans-serif;
+  font-size: 30px;
+}
+
 
 
 .image-resize{
@@ -151,16 +157,17 @@ margin-top:-12rem;
   background-color: rgb(255, 255, 255);
   margin: auto;
   padding: 20px;
-  border: 50px solid green;
+  border: 10px solid green;
   width: 80%;
-  height: 60%;
+  height: 80%;
+  margin-top:-50px;
 }
 
 /* The Close Button */
 .close {
-  color: #aaaaaa;
+  color: #000000;
   float: right;
-  font-size: 28px;
+  font-size: 58px;
   font-weight: bold;
 }
 
@@ -175,5 +182,86 @@ margin-top:-12rem;
 .modal-win-message{
   font-family: 'Common Pixel', sans-serif;
   font-size: 80px;
-  margin-left:400px;
+  margin-left:23rem;
 }
+
+.victory-gif{
+  width:30rem;
+  margin-left:21rem;
+}
+
+
+
+
+
+/* Lmodel */
+
+
+
+
+
+
+/* The Modal (background) */
+.Lmodal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.Lmodal-content {
+  background-color: rgb(255, 255, 255);
+  margin: auto;
+  padding: 20px;
+  border: 10px solid green;
+  width: 80%;
+  height: 80%;
+  margin-top:-50px;
+}
+
+/* The Close Button */
+.Lclose {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.Lclose:hover,
+.Lclose:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-lose-message{
+  font-family: 'Common Pixel', sans-serif;
+  font-size: 80px;
+  margin-left:20rem;
+  margin-top: -1rem;
+}
+
+.modal-try-message{
+  font-family: 'Common Pixel', sans-serif;
+  font-size: 60px;
+  margin-left:25.5rem;
+}
+
+.lose-gif{
+  width:20rem;
+  margin-left:28rem;
+  margin-top:-4rem;
+}
+
+
+ #display-nothing{
+ display: none;
+} 
