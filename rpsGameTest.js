@@ -83,7 +83,7 @@ function Paper(){
   let scissors = (computer === 2); // 
   let rock = (computer === 3);
   let buttonPaper = document.getElementById("paper");
-  let endResult = 3
+  let endResult = 2
   document.getElementById("rock").style.display = "none";
   document.getElementById("scissors").style.display = "none";
   if (computerPoints === endResult){
@@ -146,7 +146,7 @@ let computer = Math.floor((Math.random() * 3) + 1);
 let paper = (computer === 1); // 
 let scissors = (computer === 2); // 
 let rock = (computer === 3);
-let endResult = 3
+let endResult = 2
 let buttonScissors = document.getElementById("scissors");
 document.getElementById("rock").style.display = "none";
 document.getElementById("paper").style.display = "none";
