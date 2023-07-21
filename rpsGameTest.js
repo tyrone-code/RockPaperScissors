@@ -14,7 +14,7 @@ function Rock(){
     let buttonRock = document.getElementById("rock");
     document.getElementById("paper").style.display = "none";
     document.getElementById("scissors").style.display = "none";
-    let endResult = 3
+    let endResult = 2
     if (computerPoints === endResult){
     
       document.getElementById("computerPoints").innerHTML = 0
