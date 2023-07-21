@@ -74,7 +74,7 @@ function Rock(){
 }
 
 // 
-
+//
 
 function Paper(){
     //let user = prompt("Enter either Rock paper or scissors");
