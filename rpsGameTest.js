@@ -2,12 +2,11 @@
 var computerPoints = 0
 var userPoints = 0
 
-// var audio = new Audio('victory_sound_effect.mp3');
+
 
 
 
 function Rock(){
-      //let user = prompt("Enter either Rock paper or scissors");
     let computer = Math.floor((Math.random() * 3) + 1);
     let paper = (computer === 1); // 
     let scissors = (computer === 2); // 
@@ -15,7 +14,7 @@ function Rock(){
     let buttonRock = document.getElementById("rock");
     document.getElementById("paper").style.display = "none";
     document.getElementById("scissors").style.display = "none";
-    let endResult = 5
+    let endResult = 3
     if (computerPoints === endResult){
     
       document.getElementById("computerPoints").innerHTML = 0
@@ -84,7 +83,7 @@ function Paper(){
   let scissors = (computer === 2); // 
   let rock = (computer === 3);
   let buttonPaper = document.getElementById("paper");
-  let endResult = 5
+  let endResult = 3
   document.getElementById("rock").style.display = "none";
   document.getElementById("scissors").style.display = "none";
   if (computerPoints === endResult){
@@ -147,7 +146,7 @@ let computer = Math.floor((Math.random() * 3) + 1);
 let paper = (computer === 1); // 
 let scissors = (computer === 2); // 
 let rock = (computer === 3);
-let endResult = 5
+let endResult = 3
 let buttonScissors = document.getElementById("scissors");
 document.getElementById("rock").style.display = "none";
 document.getElementById("paper").style.display = "none";
